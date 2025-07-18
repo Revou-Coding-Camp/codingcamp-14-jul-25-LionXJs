@@ -1,13 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <h1>Coba Git</h1>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo"><img src="img/logo.webp" alt="" id="home"></div>
+            <ul class="nav-link">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#massage">Massage</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Welcome To my portfolio website</h1>
+            <p>I am a fullstack software enginer</p>
+        </div>
+        <h1 class="text-center" id="skills">skill</h1>
+        <div class="cards">
+            <div class="card">
+                <h2>Html</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, enim!</p>
+            </div>
+            <div class="card">
+                <h2>CSS</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, enim!</p>
+            </div>
+            <div class="card">
+                <h2>JS</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, enim!</p>
+            </div>
+        </div>
+        <hr>
+        <h2 class="text-center" id="massage">Massage</h2>
+        <div class="form-section">
+            <form action="" class="massage">
+                <label for="nama">Nama :</label>
+                <input type="text" id="nama" name="nama" required>
+                <br>
+                <label for="tanggal">Tanggal :</label>
+                <input type="date" id="tanggal" name="nama" required>
+                <br>
+                <label for="gender">Jenis Kelamin :</label>
+                <label for="pria"> Pria
+                    <input type="radio" id="pria" value="Pria" name="gender" required>
+                </label>
+                <label for="wanita"> Wanita
+                    <input type="radio" id="wanita" value="Wanita" name="gender" required>
+                </label>
+                <br>
+                <label for="pesan">pesan :</label>
+                <input type="text" id="pesan" name="pesan" required>
+                <br>
+                <button type="submit">Kirim</button>
+            </form>
+            <div class="text-center"><h2>Saran</h2></div>
+            <div class="result"></div>
+        </div>
+    </div>
+    <div class="footer"><p>&copy; 2023 My Portfolio</p></div>
     <script src="js/script.js"></script>
 </body>
 </html>
