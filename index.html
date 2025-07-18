@@ -10,31 +10,36 @@
 
 <body>
     <div class="container">
-        <div class="navbar">
-            <div class="logo"><img src="img/logo.webp" alt="" id="home"></div>
-            <ul class="nav-link">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#massage">Massage</a></li>
-            </ul>
-        </div>
         <div class="content">
-            <h1>Welcome To My portfolio Website</h1>
-            <p>I am a fullstack software enginer</p>
+            <div class="navbar">
+                <div class="logo"><img src="img/logo.webp" alt="" id="home"></div>
+                <ul class="nav-link">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#massage">Massage</a></li>
+                </ul>
+            </div>
+            <h1 id="typing-title"></h1>
+            <p id="typing-desc"></p>
         </div>
-        <h1 class="text-center" id="skills">skill</h1>
+        <h1 class="text-center" id="skills">Skill</h1>
         <div class="cards">
             <div class="card">
+                <img src="img/html.png" alt="HTML" class="card-img">
                 <h2>Html</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, enim!</p>
+                <p>HTML (HyperText Markup Language) adalah bahasa standar untuk membuat dan menyusun halaman web</p>
             </div>
             <div class="card">
+                <img src="img/css.png" alt="CSS" class="card-img">
                 <h2>CSS</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, enim!</p>
+                <p>CSS (Cascading Style Sheets) digunakan untuk mengatur tampilan dan layout halaman web agar lebih
+                    menarik dan responsif</p>
             </div>
             <div class="card">
-                <h2>JS</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, enim!</p>
+                <img src="img/js.png" alt="JS" class="card-img">
+                <h2>JavaScript</h2>
+                <p>JavaScript adalah bahasa pemrograman yang digunakan untuk membuat halaman web menjadi interaktif dan
+                    dinamis</p>
             </div>
         </div>
         <hr>
@@ -60,11 +65,13 @@
                 <br>
                 <button type="submit">Kirim</button>
             </form>
-            <div class="text-center"><h2>Saran</h2></div>
             <div class="result"></div>
         </div>
     </div>
-    <div class="footer"><p>&copy; 2023 My Portfolio</p></div>
+    <div class="footer">
+        <p>&copy; 2023 My Portfolio</p>
+    </div>
     <script src="js/script.js"></script>
 </body>
+
 </html>

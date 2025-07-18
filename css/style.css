@@ -12,7 +12,7 @@ body{
 }
 
 img {
-    width: 30px;
+    width: 100px;
     border-radius: 50%;
     transition: 0.5s ease-in-out;
 }
@@ -33,15 +33,28 @@ img {
 
 .nav-link li a {
     text-decoration: none;
-    color: black;
-    font-size: 1rem;
+    color: white;
+    font-size: 1.5rem;
     transition: 0.3s ease-in-out;
     padding: 5px;
+    position: relative;
 }
 
-.nav-link li a:hover {
-    background-color: tomato;
-    border-radius: 20px;
+.nav-link li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: tomato;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s;
+    border-radius: 2px;
+}
+
+.nav-link li a:hover::after {
+    width: 100%;
 }
 
 img:hover {
@@ -49,10 +62,14 @@ img:hover {
 }
 
 .content {
+    height:500px;
+    padding:20px;
     background-image: url("../img/content.jpg");
-    background-size: 1366px 578px;
+    background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
+    opacity: 0;
+    animation: fadeInBg 1.5s ease-in forwards;
 }
 
 .content h1 {
@@ -63,12 +80,30 @@ img:hover {
     color: white;
 }
 
+.cards{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:60px;
+    margin-bottom:30px;
+}
+
+.card-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
 .card {
     background-color: white;
     border-radius: 16px;
     box-shadow: 0 4px 16px black;
     padding: 24px;
     width: 220px;
+    height:200px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
@@ -146,11 +181,17 @@ img:hover {
 
 .footer p{
     text-align:right;
+    margin-right:10px;
+}
+
+@keyframes fadeInBg {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @media (max-width:600px) {
     img {
-        width: 50px;
+        width: 80px;
         margin:0;
     }
 
@@ -167,6 +208,11 @@ img:hover {
         flex-direction: column;
         gap: 12px;
         width: 100%;
+        font-size:1rem;
+    }
+
+    .nav-link li a{
+        font-size:1rem;
     }
 
     .content {
@@ -180,7 +226,7 @@ img:hover {
 
     .content h1 {
         color: white;
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .content p {

@@ -11,3 +11,29 @@ document.querySelector(".massage").addEventListener("submit", function(a){
     `;
     }
 )
+
+document.addEventListener("DOMContentLoaded", function() {
+    const titleText = "Welcome To My portfolio Website";
+    const descText = "I am a fullstack software developer";
+    let titleIdx = 0, descIdx = 0;
+
+    function typeTitle() {
+        if (titleIdx <= titleText.length) {
+            document.getElementById("typing-title").textContent = titleText.slice(0, titleIdx);
+            titleIdx++;
+            setTimeout(typeTitle, 70);
+        } else {
+            setTimeout(typeDesc, 400);
+        }
+    }
+
+    function typeDesc() {
+        if (descIdx <= descText.length) {
+            document.getElementById("typing-desc").textContent = descText.slice(0, descIdx);
+            descIdx++;
+            setTimeout(typeDesc, 50);
+        }
+    }
+
+    typeTitle();
+});
